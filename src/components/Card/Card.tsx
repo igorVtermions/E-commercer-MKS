@@ -1,8 +1,10 @@
 import { Container } from "./style";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import axios from "axios";
 import { baseUrl } from "../../lib/axios";
 import bag from "../../assets/bag.png";
+import { CartContext } from "../../Context/CartContext";
+
 
 type Products = {
   id: number;
@@ -11,14 +13,18 @@ type Products = {
   description: string;
   price: string;
   photo: string;
+  amount: number;
 };
 
 export function Card() {
   const [itens, setItens] = useState<Products[]>([]);
 
+  const {showItemCart} = useContext(CartContext)
+
   useEffect(() => {
     axios.get(baseUrl).then((response) => {
       setItens(response.data.products);
+
       console.log(response.data.products)
     });
   }, []);
@@ -36,7 +42,7 @@ export function Card() {
             Redesigned from scratch and completely revised.
           </p>
 
-          <button className="btn">
+          <button className="btn" onClick={() => showItemCart(item)}>
             <img src={bag} alt="imagem da bolsa" /> COMPRAR
           </button>
         </div>

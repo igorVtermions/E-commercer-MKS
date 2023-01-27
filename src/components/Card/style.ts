@@ -7,8 +7,10 @@ export const Container = styled.section`
 
   .photo {
     width: 65%;
+    margin-top: 2px;
   }
   .card {
+    
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -68,5 +70,39 @@ export const Container = styled.section`
       color: white;
       cursor: pointer;
     }
+  }
+
+  @media(max-width: 800px){
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+  }
+  @media(max-width: 425px){
+    .card{
+      width: 15.6rem;
+      height: 20.5rem;
+      box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.135216);
+
+      button{
+      width: 15.688rem;
+      height:2.296rem;
+    }
+    }
+  }
+  @media(max-width: 375px){
+    .card{
+      width: 15.6rem;
+      height: 20.5rem;
+      box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.135216);
+
+      button{
+      width: 15.688rem;
+      height:2.296rem;
+    }
+    }
+    
+    
+    
   }
 `;
