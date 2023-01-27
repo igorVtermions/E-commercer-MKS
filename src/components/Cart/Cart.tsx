@@ -4,10 +4,8 @@ import x from "../../assets/x.png";
 import { useContext } from "react";
 import { CartContext } from "../../Context/CartContext";
 
-
-
 export function Cart() {
-  const { cartTech, removeItemTech, plusItem, minCart } =
+  const { cartTech, removeItemTech, plusItem, minCart, total } =
     useContext(CartContext);
 
   return (
@@ -30,10 +28,23 @@ export function Cart() {
               />
 
               <p className="name">{products.name}</p>
+              <p>Qtd:</p>
               <div>
-                <button onClick={() => {plusItem(products)}}>+</button>
+                <button
+                  onClick={() => {
+                    plusItem(products);
+                  }}
+                >
+                  +
+                </button>
                 <p>{products.amount}</p>
-                <button onClick={() => {minCart(products)}}>-</button>
+                <button
+                  onClick={() => {
+                    minCart(products);
+                  }}
+                >
+                  -
+                </button>
               </div>
               <p className="price">R${products.price}</p>
 
@@ -43,6 +54,11 @@ export function Cart() {
             </div>
           );
         })}
+
+        <div>
+          <p>Total:</p>
+          <p>{total}</p>
+        </div>
       </>
     </Container>
   );

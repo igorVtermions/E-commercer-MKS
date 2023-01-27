@@ -2,8 +2,13 @@ import { Navbar } from "./style";
 import cart from "../../assets/cart.png";
 import * as Dialog from "@radix-ui/react-dialog";
 import { Cart } from "../Cart/Cart";
+import { useContext } from "react";
+import { CartContext } from "../../Context/CartContext";
 
 export function Header() {
+
+  const {cartTech} = useContext(CartContext)
+
   return (
     <Navbar>
       <div className="logo">
@@ -14,7 +19,7 @@ export function Header() {
       <Dialog.Root>
         <Dialog.Trigger type="button" className="place">
           <img src={cart} alt="Carrinho de compras" className="cart" />
-          <p className="counter">0</p>
+          <p className="counter">{cartTech.length}</p>
         </Dialog.Trigger>
         <Dialog.Portal className="modal">
         <Dialog.Overlay className="overlay" />
