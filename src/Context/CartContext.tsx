@@ -23,7 +23,7 @@ const initialValue = {
   plusItem: () => {},
   minCart: () => {},
   total: 0,
-  setTotal: () => {}
+  setTotal: () => {},
 };
 
 type Products = {
@@ -47,15 +47,17 @@ export const CartContextProvider = ({ children }: CartProviderProps) => {
     setCartTech(removeCart);
   }
 
-  useEffect(() =>{
-    const totalPerItem = cartTech.map((item: Products) => item.amount * Number(item.price))
+  useEffect(() => {
+    const totalPerItem = cartTech.map(
+      (item: Products) => item.amount * Number(item.price)
+    );
 
-    const total = totalPerItem.reduce(function(a: number, c: number){
-        return a + c
+    const total = totalPerItem.reduce(function (a: number, c: number) {
+      return a + c;
     }, 0);
 
-    setTotal(total)
-  }, [cartTech])
+    setTotal(total);
+  }, [cartTech]);
 
   function plusItem(item: Products) {
     const productCart = [...cartTech];
@@ -107,7 +109,7 @@ export const CartContextProvider = ({ children }: CartProviderProps) => {
         plusItem,
         minCart,
         total,
-        setTotal
+        setTotal,
       }}
     >
       {children}

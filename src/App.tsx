@@ -1,11 +1,9 @@
-import { Footer } from "./components/Footer/Footer"
-import { Header } from "./components/Header/Header"
-import { Home } from "./components/Home/Home"
-import { GlobalStyle } from "./global/globalStyle"
+import { Footer } from "./components/Footer/Footer";
+import { Header } from "./components/Header/Header";
+import { Home } from "./Home/Home";
+import { GlobalStyle } from "./global/globalStyle";
 
 export function App() {
- 
-
   return (
     <div className="App">
       <GlobalStyle />
@@ -13,9 +11,5 @@ export function App() {
       <Home />
       <Footer />
     </div>
-  )
+  );
 }
-
-
-
-

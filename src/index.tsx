@@ -9,7 +9,7 @@ const root = createRoot(container);
 root.render(
   <React.StrictMode>
     <CartContextProvider>
-        <App />
+      <App />
     </CartContextProvider>
   </React.StrictMode>
 );

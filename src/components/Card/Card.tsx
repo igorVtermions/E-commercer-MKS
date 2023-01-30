@@ -5,7 +5,6 @@ import { baseUrl } from "../../lib/axios";
 import bag from "../../assets/bag.png";
 import { CartContext } from "../../Context/CartContext";
 
-
 type Products = {
   id: number;
   name: string;
@@ -19,13 +18,11 @@ type Products = {
 export function Card() {
   const [itens, setItens] = useState<Products[]>([]);
 
-  const {showItemCart} = useContext(CartContext)
+  const { showItemCart } = useContext(CartContext);
 
   useEffect(() => {
     axios.get(baseUrl).then((response) => {
       setItens(response.data.products);
-
-      console.log(response.data.products)
     });
   }, []);
 

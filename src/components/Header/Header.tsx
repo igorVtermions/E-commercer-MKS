@@ -6,8 +6,7 @@ import { useContext } from "react";
 import { CartContext } from "../../Context/CartContext";
 
 export function Header() {
-
-  const {cartTech} = useContext(CartContext)
+  const { cartTech } = useContext(CartContext);
 
   return (
     <Navbar>
@@ -21,11 +20,11 @@ export function Header() {
           <img src={cart} alt="Carrinho de compras" className="cart" />
           <p className="counter">{cartTech.length}</p>
         </Dialog.Trigger>
-        <Dialog.Portal className="modal">
-        <Dialog.Overlay className="overlay" />
+        <Dialog.Portal>
+          <Dialog.Overlay className="overlay" />
         </Dialog.Portal>
-        <Dialog.Content className="modal content">
-            <Cart />
+        <Dialog.Content className="modal">
+          <Cart />
         </Dialog.Content>
       </Dialog.Root>
     </Navbar>

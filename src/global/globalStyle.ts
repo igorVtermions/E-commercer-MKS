@@ -12,11 +12,11 @@ export const GlobalStyle = createGlobalStyle`
 
     .App{
         display: flex;
-        flex-direction:column;
+        flex-direction: column;
         align-items: center;
         height: 100%;
-        gap: 124px;
+        gap: 8.1rem;
         justify-content: space-between;
         
     }
-`
+`;
