@@ -50,16 +50,20 @@ export const Navbar = styled.header`
   }
 
   .modal {
-    display: flex;
-    justify-content: center;
-    position: fixed;
-    left: 87.2rem;
-    top: 0px;
-    background: #0f52ba;
+    width:  39vw;
+    max-width: 500px;
+    min-width: 320px;
+    height: 100vh;
     box-shadow: -5px 0px 6px rgba(0, 0, 0, 0.13);
-    height: 100%;
-    width: 30.3rem;
-    animation: modal 0.3s;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: #0f52ba;
+    position: fixed;
+    top: 0;
+    right: 0;
+    overflow-y: auto;
+    animation: modal .4s;
   }
 
   @keyframes modal {
@@ -73,56 +77,15 @@ export const Navbar = styled.header`
     }
   }
 
-  @media (max-width: 1460px) {
-    .modal {
-      left: 59.7rem;
+  @media(max-width: 800px){
+    .modal{
+      width: 60vw;
     }
   }
-  @media (max-width: 1024px) {
-    .modal {
-      left: 33.7rem;
-    }
-  }
-  @media (max-width: 800px) {
-    .modal {
-      height: 1200px;
-      left:20rem;
+  @media(max-width: 500px){
+    .modal{
+      width: 80vw;
     }
   }
 
-  @media (max-width: 500px) {
-    padding: 0;
-    gap: 5rem;
-    height: 3.5rem;
-    justify-content: space-around;
-
-    .logo {
-      .logo01 {
-        font-size: 2rem;
-      }
-      .logo02 {
-        font-size: 1rem;
-      }
-    }
-
-    .place {
-      width: 4.1rem;
-      height: 2.1rem;
-      gap: 10px;
-      padding: 10px;
-    }
-
-    .modal {
-      width: 22rem;
-      height: 650px;
-      left: 3.1rem;
-    }
-  }
-
-  @media (max-width: 375px) {
-    .modal {
-      width: 19.7rem;
-      left: 3.9rem;
-    }
-  }
 `;

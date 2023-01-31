@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const Container = styled.section`
   display: flex;
+  height: 100vh;
   align-items: center;
   flex-direction: column;
   justify-content: space-between;
@@ -80,6 +81,7 @@ export const Container = styled.section`
           display: flex;
           flex-direction: row-reverse;
           align-items: center;
+
           justify-content: space-between;
           border: 0.3px solid #bfbfbf;
           border-radius: 4px;
@@ -96,7 +98,7 @@ export const Container = styled.section`
 
           .plus {
             border-left: 0.2px solid #bfbfbf;
-            padding: 1px;
+            padding: 2px;
           }
           .min {
             border-right: 0.2px solid #bfbfbf;
@@ -123,8 +125,8 @@ export const Container = styled.section`
         width: 1.5rem;
         cursor: pointer;
         position: relative;
-        top: -20px;
-        left: 10px;
+        top: -22px;
+        left: 9px;
       }
       .closeMobile {
         display: none;
@@ -139,10 +141,11 @@ export const Container = styled.section`
     gap: 38px;
 
     .total {
+      margin-top: 30px;
       display: flex;
       align-items: center;
+      gap: 200px;
       justify-content: space-between;
-      width: 80%;
 
       .textTotal {
         color: white;
@@ -156,7 +159,7 @@ export const Container = styled.section`
       background-color: black;
       color: white;
       border: none;
-      width: 485px;
+      width: 499px;
       height: 97px;
       font-weight: 700;
       font-size: 1.7rem;
@@ -165,10 +168,30 @@ export const Container = styled.section`
     }
   }
 
-  @media (max-width: 500px) {
+  @media (max-width: 1024px) {
+    width: 35vw;
+
+    .topItems {
+      .card {
+        width: 23rem;
+        height: 5.9rem;
+      }
+    }
+
+    .bottomItems {
+      .total {
+        gap: 150px;
+      }
+      .btnFinisher {
+        width: 400px;
+      }
+    }
+  }
+
+  @media (max-width: 800px) {
     .topItems {
       .headerCart {
-        gap: 0;
+        width: 120%;
         .close {
           width: 46px;
           height: 46px;
@@ -257,8 +280,36 @@ export const Container = styled.section`
       .btnFinisher {
         font-size: 23px;
         line-height: 15px;
-        width: 353px;
+        width: 460px;
         height: 85px;
+      }
+    }
+  }
+
+  @media (max-width: 500px) {
+    .topItems {
+      .headerCart {
+        width: 100%;
+        .close {
+          width: 46px;
+          height: 46px;
+        }
+      }
+      .card {
+        flex-direction: column;
+        width: 15.6rem;
+        height: 13.7rem;
+
+      }
+    }
+
+    .bottomItems {
+      .total {
+      gap: 100px;
+    }
+      .btnFinisher {
+        width: 340px;
+        height: 90px;
       }
     }
   }
