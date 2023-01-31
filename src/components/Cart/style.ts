@@ -299,14 +299,13 @@ export const Container = styled.section`
         flex-direction: column;
         width: 15.6rem;
         height: 13.7rem;
-
       }
     }
 
     .bottomItems {
       .total {
-      gap: 100px;
-    }
+        gap: 100px;
+      }
       .btnFinisher {
         width: 340px;
         height: 90px;
