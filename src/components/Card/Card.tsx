@@ -1,5 +1,5 @@
 import { Container } from "./style";
-import { useContext, useEffect, useState, useRef } from "react";
+import { useContext, useEffect, useState } from "react";
 import axios from "axios";
 import { baseUrl } from "../../lib/axios";
 import bag from "../../assets/bag.png";
