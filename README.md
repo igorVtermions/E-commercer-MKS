@@ -1,3 +1,24 @@
+# Ecommerce MKS
+
+<img src="https://cdn.discordapp.com/attachments/1037425403985399841/1070329513269002321/mks.jpg" alt="imagem da logo">
+
+#
+Technologies
+* React
+* Typescript
+* Styled-components
+* Redux Toolkit
+* axios
+* radix
+
+# How to use: 
+
+* git clone https://github.com/igorVtermions/E-commercer-MKS.git
+* npm install
+* npm install styled-components
+* npm install axios
+* npm install @radix-ui/react-dialog
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) TS template.
@@ -44,3 +65,7 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+# Info
+ 
+<p>Esse projeto é um Ecommerce simples, onde tem por funcionalidades renderizar itens vindo de uma API e poder adicionar esses itens a um carrinho de compras. </p>
