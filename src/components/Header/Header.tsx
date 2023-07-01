@@ -11,7 +11,7 @@ export function Header() {
   return (
     <Navbar>
       <div className="logo">
-        <p className="logo01">MKS</p>
+        <p className="logo01">Ecommerce</p>
         <p className="logo02">Sistemas</p>
       </div>
 
